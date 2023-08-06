@@ -1,0 +1,40 @@
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mediaQuery($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop-tablet) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-small {
+    @media only screen and (min-width: $breakpoint-desktop-tablet) and (max-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+}

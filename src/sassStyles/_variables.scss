@@ -1,0 +1,13 @@
+:root {
+  // CSS color variables
+
+  --color-text-1: #fff;
+  --color-text-2: #000;
+  --color-text-3: #969696;
+}
+
+// Sass breakpoint variables
+
+$breakpoint-mobile: 37.5em;
+$breakpoint-desktop-tablet: 75em;
+$breakpoint-desktop: 100em;

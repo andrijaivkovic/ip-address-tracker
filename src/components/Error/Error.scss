@@ -1,0 +1,14 @@
+.error {
+  @include flex-column;
+  @include flex-center;
+
+  & > h3 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  gap: 1rem;
+
+  max-width: 15ch;
+  text-align: center;
+}

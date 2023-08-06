@@ -1,0 +1,165 @@
+.navigation-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  z-index: 999;
+
+  @include flex-column;
+  align-items: center;
+
+  padding: 2rem 2.4rem;
+
+  gap: 2rem;
+
+  width: 100%;
+
+  @include mediaQuery(desktop) {
+    gap: 4.8rem;
+    padding: 4.8rem 2.4rem;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    color: var(--color-text-1);
+
+    @include mediaQuery(desktop) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__input-container {
+    @include flex-row;
+    justify-content: space-between;
+
+    width: 100%;
+
+    background-color: var(--color-text-1);
+
+    border-radius: 1rem;
+    overflow: hidden;
+
+    box-shadow: 0 2rem 5rem 2rem rgba($color: #000000, $alpha: 0.05);
+
+    @include mediaQuery(desktop) {
+      border-radius: 1.5rem;
+      width: 30%;
+    }
+
+    & > input {
+      padding: 1.5rem;
+      font-size: 1.2rem;
+      width: 100%;
+
+      @include mediaQuery(desktop) {
+        font-size: 1.8rem;
+        padding: 3rem;
+      }
+    }
+
+    & > button {
+      @include flex-row;
+      @include flex-center;
+
+      padding: 1.5rem 2.6rem;
+
+      background-color: var(--color-text-2);
+
+      &:hover,
+      &:active {
+        opacity: 0.75;
+      }
+
+      @include mediaQuery(desktop) {
+        padding: 2.75rem 4rem;
+      }
+    }
+  }
+
+  &__info-container {
+    @include flex-column;
+    align-items: center;
+
+    gap: 1.4rem;
+
+    padding: 2rem;
+
+    width: 100%;
+
+    background-color: var(--color-text-1);
+
+    border-radius: 1rem;
+    overflow: hidden;
+
+    box-shadow: 0 2rem 5rem 2rem rgba($color: #000000, $alpha: 0.05);
+
+    @include mediaQuery(desktop) {
+      display: grid;
+      grid-template-columns: 1fr min-content 1fr min-content 1fr min-content 1fr min-content;
+
+      width: 80%;
+
+      min-height: 17.5rem;
+      border-radius: 1.5rem;
+    }
+  }
+
+  &__info {
+    @include flex-column;
+    align-items: center;
+
+    @include mediaQuery(desktop) {
+      align-items: flex-start;
+    }
+
+    & > p:first-of-type {
+      font-size: 1.2rem;
+      color: var(--color-text-3);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      @include mediaQuery(desktop) {
+        font-size: 1.6rem;
+      }
+    }
+
+    & > p:last-of-type {
+      font-size: 1.4rem;
+      font-weight: 500;
+
+      text-align: center;
+
+      @include mediaQuery(desktop) {
+        font-size: 2.4rem;
+        text-align: unset;
+      }
+    }
+
+    @include mediaQuery(desktop) {
+      padding: 4rem 6rem;
+    }
+  }
+}
+
+.info__divider {
+  display: none;
+
+  @include mediaQuery(desktop) {
+    display: block;
+    height: 8rem;
+    border: 1px solid rgba(#969696, $alpha: 0.15);
+  }
+}
+
+.navigation-background {
+  min-height: 27.5rem;
+  width: 100%;
+  background-image: url("/images/pattern-bg-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mediaQuery(desktop) {
+    min-height: 36rem;
+  }
+}

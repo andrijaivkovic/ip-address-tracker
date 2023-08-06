@@ -1,0 +1,15 @@
+.map-container {
+  @include flex-row;
+  @include flex-center;
+
+  position: relative;
+  flex: 1;
+  background-color: var(--color-dark--2);
+  height: 100%;
+  width: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
